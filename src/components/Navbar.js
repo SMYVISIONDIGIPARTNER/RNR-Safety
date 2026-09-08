@@ -48,8 +48,12 @@ function Navbar() {
             width: 100%;
             z-index: 9990;
             background: #ffffff;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
           }
+
+          /* =========================
+             TOP BAR
+          ========================== */
 
           .rnr-topbar {
             background: #062d61;
@@ -82,6 +86,10 @@ function Navbar() {
             text-decoration: none;
           }
 
+          /* =========================
+             MAIN NAVBAR
+          ========================== */
+
           .rnr-navbar-inner {
             max-width: 1250px;
             min-height: 76px;
@@ -109,6 +117,7 @@ function Navbar() {
             width: 190px;
             height: auto;
             display: block;
+            object-fit: contain;
           }
 
           /* =========================
@@ -138,6 +147,7 @@ function Navbar() {
             position: absolute;
             bottom: 18px;
             left: 50%;
+
             transform: translateX(-50%);
 
             width: 0;
@@ -159,6 +169,10 @@ function Navbar() {
             width: 100%;
           }
 
+          /* =========================
+             QUOTE BUTTON
+          ========================== */
+
           .rnr-quote-btn {
             min-height: 48px;
             padding: 0 22px;
@@ -169,6 +183,7 @@ function Navbar() {
             gap: 8px;
 
             text-decoration: none;
+
             color: #ffffff;
             font-size: 14px;
             font-weight: 800;
@@ -176,11 +191,20 @@ function Navbar() {
             background: #ff6b0b;
             border-radius: 12px;
 
-            box-shadow: 0 10px 22px rgba(255,107,11,0.22);
+            box-shadow: 0 10px 22px rgba(255, 107, 11, 0.22);
+
+            transition:
+              transform 0.25s ease,
+              box-shadow 0.25s ease;
+          }
+
+          .rnr-quote-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(255, 107, 11, 0.3);
           }
 
           /* =========================
-             HAMBURGER BUTTON
+             HAMBURGER
           ========================== */
 
           .rnr-hamburger {
@@ -198,6 +222,8 @@ function Navbar() {
 
             cursor: pointer;
             padding: 0;
+
+            flex-shrink: 0;
           }
 
           .rnr-hamburger span {
@@ -209,6 +235,8 @@ function Navbar() {
 
             background: #062d61;
             border-radius: 20px;
+
+            transition: 0.25s ease;
           }
 
           .rnr-hamburger span:nth-child(1) {
@@ -241,7 +269,9 @@ function Navbar() {
             opacity: 0;
             visibility: hidden;
 
-            transition: 0.3s ease;
+            transition:
+              opacity 0.3s ease,
+              visibility 0.3s ease;
           }
 
           .rnr-mobile-overlay.open {
@@ -270,9 +300,9 @@ function Navbar() {
 
             overflow-y: auto;
 
-            box-shadow: -15px 0 40px rgba(0,0,0,0.18);
+            box-shadow: -15px 0 40px rgba(0, 0, 0, 0.18);
 
-            transition: right 0.35s ease;
+            transition: right 0.35s cubic-bezier(0.22, 1, 0.36, 1);
           }
 
           .rnr-mobile-menu.open {
@@ -284,11 +314,13 @@ function Navbar() {
           ========================== */
 
           .rnr-mobile-top {
-            min-height: 78px;
+            min-height: 82px;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            gap: 15px;
 
             border-bottom: 1px solid #edf1f6;
 
@@ -298,14 +330,26 @@ function Navbar() {
           .rnr-mobile-logo {
             display: flex;
             align-items: center;
+
             text-decoration: none;
+
+            flex: 1;
+            min-width: 0;
           }
 
           .rnr-mobile-logo img {
-            width: 145px;
+            width: 170px;
+            max-width: 100%;
             height: auto;
+
             display: block;
+
+            object-fit: contain;
           }
+
+          /* =========================
+             CLOSE BUTTON
+          ========================== */
 
           .rnr-close-btn {
             width: 44px;
@@ -341,6 +385,8 @@ function Navbar() {
             background: #062d61;
 
             border-radius: 20px;
+
+            transition: 0.25s ease;
           }
 
           .rnr-close-btn span:first-child {
@@ -379,12 +425,15 @@ function Navbar() {
 
             border-bottom: 1px solid #e9edf2;
 
-            transition: 0.2s ease;
+            transition:
+              color 0.2s ease,
+              padding-left 0.2s ease;
           }
 
           .rnr-mobile-link:hover,
           .rnr-mobile-link.active {
             color: #ff6b0b;
+            padding-left: 5px;
           }
 
           /* =========================
@@ -448,6 +497,15 @@ function Navbar() {
 
             font-size: 15px;
             font-weight: 800;
+
+            transition:
+              transform 0.25s ease,
+              box-shadow 0.25s ease;
+          }
+
+          .rnr-mobile-call:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(255, 107, 11, 0.25);
           }
 
           .rnr-mobile-whatsapp {
@@ -470,149 +528,177 @@ function Navbar() {
 
             font-size: 15px;
             font-weight: 800;
+
+            transition:
+              transform 0.25s ease,
+              box-shadow 0.25s ease;
+          }
+
+          .rnr-mobile-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(19, 166, 74, 0.25);
           }
 
           /* =========================
-             TABLET
+             TABLET / MOBILE
           ========================== */
-
           @media (max-width: 900px) {
-            body {
-              padding-top: 70px;
-            }
+  body {
+    padding-top: 88px;
+  }
 
-            .rnr-topbar {
-              display: none;
-            }
+  .rnr-topbar {
+    display: none;
+  }
 
-            .rnr-navbar-inner {
-              min-height: 70px;
-              padding: 0 15px;
-            }
+  .rnr-navbar-inner {
+    min-height: 88px;
+    padding: 0 15px;
+    gap: 10px;
+  }
 
-            .rnr-logo img {
-              width: 150px;
-            }
+  /* BIG MOBILE/TABLET LOGO */
+  .rnr-logo img {
+    width: 220px;
+    max-width: calc(100vw - 85px);
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
 
-            .rnr-desktop-nav {
-              display: none;
-            }
+  .rnr-desktop-nav {
+    display: none;
+  }
 
-            .rnr-hamburger {
-              display: block;
-            }
-          }
+  .rnr-hamburger {
+    display: block;
+    flex-shrink: 0;
+  }
+}
 
-          /* =========================
-             SMALL MOBILE
-          ========================== */
+@media (max-width: 480px) {
+  body {
+    padding-top: 86px;
+  }
 
-          @media (max-width: 480px) {
-            body {
-              padding-top: 66px;
-            }
+  .rnr-navbar-inner {
+    min-height: 86px;
+    padding: 0 10px;
+    gap: 8px;
+  }
 
-            .rnr-navbar-inner {
-              min-height: 66px;
-              padding: 0 12px;
-            }
+  /* MAIN MOBILE LOGO */
+  .rnr-logo img {
+    width: 215px;
+    max-width: calc(100vw - 70px);
+    height: auto;
+  }
 
-            .rnr-logo img {
-              width: 135px;
-            }
+  .rnr-hamburger {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
 
-            .rnr-hamburger {
-              width: 42px;
-              height: 42px;
-            }
+  .rnr-mobile-menu {
+    width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-            .rnr-mobile-menu {
-              width: 88%;
-              padding-left: 20px;
-              padding-right: 20px;
-            }
+  /* LOGO INSIDE HAMBURGER MENU */
+  .rnr-mobile-logo img {
+    width: 200px;
+    max-width: calc(100% - 55px);
+    height: auto;
+  }
 
-            .rnr-mobile-logo img {
-              width: 135px;
-            }
+  .rnr-mobile-top {
+    min-height: 92px;
+  }
+}
 
-            .rnr-mobile-top {
-              min-height: 72px;
-            }
-          }
+@media (max-width: 350px) {
+  .rnr-navbar-inner {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 
-          @media (max-width: 350px) {
-            .rnr-mobile-menu {
-              width: 92%;
-            }
+  .rnr-logo img {
+    width: 195px;
+    max-width: calc(100vw - 65px);
+  }
 
-            .rnr-mobile-logo img {
-              width: 120px;
-            }
-          }
+  .rnr-mobile-menu {
+    width: 94%;
+  }
+
+  .rnr-mobile-logo img {
+    width: 180px;
+  }
+}
         `}
       </style>
 
-      {/* NAVBAR */}
+      {/* =========================
+          NAVBAR
+      ========================== */}
 
       <header className="rnr-navbar-wrapper">
+        {/* TOP BAR */}
+
         <div className="rnr-topbar">
           <div className="rnr-topbar-inner">
-
             <div className="rnr-top-left">
               <span>📍 Visakhapatnam, Andhra Pradesh</span>
             </div>
 
             <div className="rnr-top-right">
-
               <a
-                href="tel:9705429255"
+                href="tel:+918500352005"
                 className="rnr-top-link"
               >
-                ☎ Call Us: 9705429255
+                ☎ Call Us: 8500352005
               </a>
 
               <a
-                href="https://wa.me/919705429255"
+                href="https://wa.me/918500352005"
                 target="_blank"
                 rel="noreferrer"
                 className="rnr-top-link"
               >
                 WhatsApp
               </a>
-
             </div>
-
           </div>
         </div>
 
+        {/* MAIN NAVIGATION */}
+
         <nav>
           <div className="rnr-navbar-inner">
-
             {/* LOGO */}
 
             <NavLink
               to="/"
               className="rnr-logo"
               onClick={closeMenu}
+              aria-label="RNR Balcony Safety Nets Vizag Home"
             >
               <img
                 src="/logo.png"
-                alt="RNR Safety Nets"
+                alt="RNR Balcony Safety Nets Vizag"
               />
             </NavLink>
 
             {/* DESKTOP LINKS */}
 
             <div className="rnr-desktop-nav">
-
               <NavLink
                 to="/"
                 end
                 className={({ isActive }) =>
-                  `rnr-nav-link ${
-                    isActive ? "active" : ""
-                  }`
+                  `rnr-nav-link ${isActive ? "active" : ""}`
                 }
               >
                 Home
@@ -621,9 +707,7 @@ function Navbar() {
               <NavLink
                 to="/about-us"
                 className={({ isActive }) =>
-                  `rnr-nav-link ${
-                    isActive ? "active" : ""
-                  }`
+                  `rnr-nav-link ${isActive ? "active" : ""}`
                 }
               >
                 About
@@ -632,9 +716,7 @@ function Navbar() {
               <NavLink
                 to="/services"
                 className={({ isActive }) =>
-                  `rnr-nav-link ${
-                    isActive ? "active" : ""
-                  }`
+                  `rnr-nav-link ${isActive ? "active" : ""}`
                 }
               >
                 Services
@@ -643,21 +725,18 @@ function Navbar() {
               <NavLink
                 to="/contact-us"
                 className={({ isActive }) =>
-                  `rnr-nav-link ${
-                    isActive ? "active" : ""
-                  }`
+                  `rnr-nav-link ${isActive ? "active" : ""}`
                 }
               >
                 Contact
               </NavLink>
 
               <a
-                href="tel:9705429255"
+                href="tel:+918500352005"
                 className="rnr-quote-btn"
               >
                 ☎ Get a Free Quote
               </a>
-
             </div>
 
             {/* MOBILE HAMBURGER */}
@@ -667,45 +746,52 @@ function Navbar() {
               className="rnr-hamburger"
               onClick={() => setMenuOpen(true)}
               aria-label="Open Menu"
+              aria-expanded={menuOpen}
+              aria-controls="rnr-mobile-navigation"
             >
               <span></span>
               <span></span>
               <span></span>
             </button>
-
           </div>
         </nav>
       </header>
 
-      {/* OVERLAY */}
+      {/* =========================
+          OVERLAY
+      ========================== */}
 
       <div
         className={`rnr-mobile-overlay ${
           menuOpen ? "open" : ""
         }`}
         onClick={closeMenu}
+        aria-hidden="true"
       />
 
-      {/* MOBILE MENU */}
+      {/* =========================
+          MOBILE MENU
+      ========================== */}
 
       <aside
+        id="rnr-mobile-navigation"
         className={`rnr-mobile-menu ${
           menuOpen ? "open" : ""
         }`}
+        aria-hidden={!menuOpen}
       >
-
         {/* LOGO + CLOSE */}
 
         <div className="rnr-mobile-top">
-
           <NavLink
             to="/"
             className="rnr-mobile-logo"
             onClick={closeMenu}
+            aria-label="RNR Balcony Safety Nets Vizag Home"
           >
             <img
               src="/logo.png"
-              alt="RNR Safety Nets"
+              alt="RNR Balcony Safety Nets Vizag"
             />
           </NavLink>
 
@@ -718,13 +804,11 @@ function Navbar() {
             <span></span>
             <span></span>
           </button>
-
         </div>
 
         {/* MOBILE LINKS */}
 
         <div className="rnr-mobile-links">
-
           <NavLink
             to="/"
             end
@@ -773,42 +857,40 @@ function Navbar() {
           >
             Contact
           </NavLink>
-
         </div>
 
         {/* CONTACT */}
 
         <div className="rnr-mobile-contact">
-
-          <small>
-            CALL RNR SAFETY NETS
-          </small>
+          <small>CALL RNR SAFETY NETS</small>
 
           <a
-            href="tel:9705429255"
+            href="tel:+918500352005"
             className="rnr-mobile-phone"
           >
-            9705429255
+            8500352005
           </a>
-
         </div>
 
+        {/* CALL */}
+
         <a
-          href="tel:9705429255"
+          href="tel:+918500352005"
           className="rnr-mobile-call"
         >
           ☎ Get a Free Quote
         </a>
 
+        {/* WHATSAPP */}
+
         <a
-          href="https://wa.me/919705429255?text=Hi%20RNR%20Safety%20Nets%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+          href="https://wa.me/918500352005?text=Hi%20RNR%20Safety%20Nets%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
           target="_blank"
           rel="noreferrer"
           className="rnr-mobile-whatsapp"
         >
           WhatsApp Now
         </a>
-
       </aside>
     </>
   );
