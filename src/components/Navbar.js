@@ -655,14 +655,14 @@ function Navbar() {
 
             <div className="rnr-top-right">
               <a
-                href="tel:+918500352005"
+                href="tel:+919705429255"
                 className="rnr-top-link"
               >
-                ☎ Call Us: 8500352005
+                ☎ Call Us: 9705429255
               </a>
 
               <a
-                href="https://wa.me/918500352005"
+                href="https://wa.me/919705429255"
                 target="_blank"
                 rel="noreferrer"
                 className="rnr-top-link"
@@ -732,7 +732,7 @@ function Navbar() {
               </NavLink>
 
               <a
-                href="tel:+918500352005"
+                href="tel:+919705429255"
                 className="rnr-quote-btn"
               >
                 ☎ Get a Free Quote
@@ -865,17 +865,17 @@ function Navbar() {
           <small>CALL RNR SAFETY NETS</small>
 
           <a
-            href="tel:+918500352005"
+            href="tel:+919705429255"
             className="rnr-mobile-phone"
           >
-            8500352005
+            9705429255
           </a>
         </div>
 
         {/* CALL */}
 
         <a
-          href="tel:+918500352005"
+          href="tel:+919705429255"
           className="rnr-mobile-call"
         >
           ☎ Get a Free Quote
@@ -884,7 +884,7 @@ function Navbar() {
         {/* WHATSAPP */}
 
         <a
-          href="https://wa.me/918500352005?text=Hi%20RNR%20Safety%20Nets%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+          href="https://wa.me/919705429255?text=Hi%20RNR%20Safety%20Nets%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
           target="_blank"
           rel="noreferrer"
           className="rnr-mobile-whatsapp"

@@ -53,6 +53,30 @@ function Services() {
         "Bird protection nets offer an effective solution to keep birds away from your space. Made from durable, weather-resistant materials, they prevent nesting and droppings while maintaining ventilation, making them ideal for balconies, windows, and open areas.",
     },
     {
+  title: "Cloth Hangers",
+  image: "/images/cloth-hangers.jpg",
+  fallback:
+    "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1000&q=85",
+  description:
+    "Cloth hangers are designed for convenient and space-saving clothes drying solutions. Made from high-quality, rust-resistant materials, they offer durability, strength, and easy operation, making them ideal for balconies, apartments, homes, and residential spaces.",
+},
+{
+  title: "Mosquito Mesh Door",
+  image: "/images/mosquito-mesh-door.jpg",
+  fallback:
+    "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=85",
+  description:
+    "Mosquito mesh doors are designed to protect homes and offices from mosquitoes, flies, and other insects while allowing fresh air and natural ventilation. Made from durable, high-quality mesh materials, they provide long-lasting protection, comfort, and convenience for residential and commercial spaces.",
+},
+{
+  title: "Window Blinds",
+  image: "/images/window-blinds.jpg",
+  fallback:
+    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85",
+  description:
+    "Window blinds are designed to enhance privacy, control sunlight, and improve interior aesthetics. Made from premium-quality materials, they offer durability, easy maintenance, and smooth operation, making them ideal for homes, offices, apartments, and commercial spaces.",
+},
+    {
       title: "Duct Area Safety Nets",
       image: "/images/ductareasafetynets.png",
       fallback:

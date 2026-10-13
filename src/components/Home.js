@@ -278,32 +278,30 @@ function Home() {
         "Effective bird-control net solutions designed to protect balconies, windows and commercial spaces without harming birds.",
     },
 
-    {
-      title: "Children Safety Nets",
-      image: "/images/children-safety-nets.jpg",
-      fallback:
-        "https://images.unsplash.com/photo-1602030028438-4cf153cbae9e?auto=format&fit=crop&w=900&q=80",
-      text:
-        "Safety nets designed to help protect children around balconies, windows, staircases and other open areas.",
-    },
-
-    {
-      title: "Duct Area Safety Nets",
-      image: "/images/ductareasafetynets.png",
-      fallback:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
-      text:
-        "Secure net coverage for duct openings and service shafts to help reduce accidents, debris fall and bird entry.",
-    },
-
-    {
-      title: "Building Safety Nets",
-      image: "/images/buildingsafetynets.png",
-      fallback:
-        "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80",
-      text:
-        "Safety net installations for buildings and elevated areas requiring dependable protection.",
-    },
+   {
+  title: "Cloth Hangers",
+  image: "/images/cloth-hangers.jpg",
+  fallback:
+    "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=900&q=80",
+  text:
+    "High-quality and space-saving cloth hanger solutions for balconies, homes and apartments, designed for durability, convenience and everyday use.",
+},
+{
+  title: "Mosquito Mesh Door",
+  image: "/images/mosquito-mesh-door.jpg",
+  fallback:
+    "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+  text:
+    "Premium mosquito mesh door solutions that protect your home from mosquitoes and insects while allowing fresh air, natural ventilation and comfortable living.",
+},
+{
+  title: "Window Blinds",
+  image: "/images/window-blinds.jpg",
+  fallback:
+    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80",
+  text:
+    "Stylish and durable window blind solutions for homes, offices and commercial spaces, offering privacy, sunlight control and a modern interior appearance.",
+},
 
     {
       title: "Industrial Safety Nets",
@@ -349,6 +347,7 @@ function Home() {
       text:
         "Durable cricket practice net solutions for schools, clubs, training areas and private practice spaces.",
     },
+  
   ];
 
   const fallbackImage = (event, fallback) => {
